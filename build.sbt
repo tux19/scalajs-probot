@@ -44,7 +44,7 @@ libraryDependencies ++= Seq(
   "io.scalajs" %%% "nodejs" % "0.4.2",
 )
 
-lazy val root = (project in file("."))
+lazy val `scalajs-probot` = (project in file("."))
   .dependsOn(scalaJsOktokit)
 
 lazy val scalaJsOktokit =
