@@ -42,5 +42,10 @@ resolvers += Resolver.bintrayRepo("laughedelic", "maven")
 libraryDependencies ++= Seq(
   "io.scalajs.npm" %%% "express" % "0.4.2",
   "io.scalajs" %%% "nodejs" % "0.4.2",
-  "laughedelic" %%% "scalajs-octokit" % "aa984a0d",
 )
+
+lazy val root = (project in file("."))
+  .dependsOn(scalaJsOktokit)
+
+lazy val scalaJsOktokit =
+  ProjectRef(uri("https://github.com/laughedelic/scalajs-octokit.git#aa984a0d"), "scalajs-octokit")
